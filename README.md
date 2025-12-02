@@ -1,5 +1,4 @@
 # VA Proxy PhotoMode
-==================
 Simple mod for photo mode in VA Proxy. Some code was taken from tairasoul for the freecam
 
 # Keybinds
