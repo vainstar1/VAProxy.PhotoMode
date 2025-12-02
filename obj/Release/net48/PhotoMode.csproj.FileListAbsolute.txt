@@ -1,0 +1,9 @@
+c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\bin\Release\net48\PhotoMode.dll
+c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\bin\Release\net48\PhotoMode.pdb
+c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\obj\Release\net48\PhotoMode.csproj.AssemblyReference.cache
+c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\obj\Release\net48\PhotoMode.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\obj\Release\net48\PhotoMode.AssemblyInfoInputs.cache
+c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\obj\Release\net48\PhotoMode.AssemblyInfo.cs
+c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\obj\Release\net48\PhotoMode.csproj.CoreCompileInputs.cache
+c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\obj\Release\net48\PhotoMode.dll
+c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\obj\Release\net48\PhotoMode.pdb
