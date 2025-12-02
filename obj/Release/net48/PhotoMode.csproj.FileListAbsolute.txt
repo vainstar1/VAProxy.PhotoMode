@@ -7,3 +7,4 @@ c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\obj\Release\net48\PhotoMode
 c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\obj\Release\net48\PhotoMode.csproj.CoreCompileInputs.cache
 c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\obj\Release\net48\PhotoMode.dll
 c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\obj\Release\net48\PhotoMode.pdb
+C:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\obj\Release\net48\PhotoMode.sourcelink.json

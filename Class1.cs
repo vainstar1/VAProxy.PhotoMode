@@ -98,6 +98,8 @@ namespace FreecamMod
 
                 if (InputManager.GetKey(KeyCode.LeftShift) || InputManager.GetKey(KeyCode.RightShift))
                     moveSpeed *= 4f;
+                if (InputManager.GetKey(KeyCode.LeftAlt) || InputManager.GetKey(KeyCode.RightAlt))
+                    moveSpeed *= 0.25f;
                 if (InputManager.GetKey(KeyCode.LeftArrow) || InputManager.GetKey(KeyCode.A))
                     transform.position += transform.right * -1 * moveSpeed;
                 if (InputManager.GetKey(KeyCode.RightArrow) || InputManager.GetKey(KeyCode.D))
@@ -128,6 +130,7 @@ namespace FreecamPauseMod
         ConfigEntry<KeyCode> freecamPauseKey;
         FreecamMod.Freecam freecam;
         GameObject ui;
+        GameObject uiRoot;
         bool sceneReady;
 
         void Awake()
@@ -173,6 +176,7 @@ namespace FreecamPauseMod
                     Time.timeScale = 1f;
                 freecam = null;
                 ui = null;
+                uiRoot = null;
                 return;
             }
             EnsureReferences();
@@ -190,6 +194,8 @@ namespace FreecamPauseMod
             }
             if (ui == null)
                 ui = GameObject.Find("UI/Stuff/UI/ui/StandardUI");
+            if (uiRoot == null)
+                uiRoot = GameObject.Find("UI/Stuff/UI/ui");
         }
 
         void Toggle()
@@ -212,12 +218,16 @@ namespace FreecamPauseMod
         {
             if (ui != null)
                 ui.SetActive(true);
+            if (uiRoot != null)
+                uiRoot.SetActive(true);
         }
 
         void DisableUI()
         {
             if (ui != null)
                 ui.SetActive(false);
+            if (uiRoot != null)
+                uiRoot.SetActive(false);
         }
     }
 }
