@@ -83,7 +83,7 @@ namespace FreecamMod
             if (freecamActive)
             {
                 float scroll = Input.GetAxis("Mouse ScrollWheel");
-                desiredMoveSpeed += scroll * 10;
+                desiredMoveSpeed = Mathf.Max(0f, desiredMoveSpeed + scroll * 5f);
                 EnsureVelocityIsZero();
             }
             else
@@ -192,10 +192,10 @@ namespace FreecamPauseMod
                 if (cam != null)
                     freecam = cam.gameObject.GetComponent<FreecamMod.Freecam>() ?? cam.gameObject.AddComponent<FreecamMod.Freecam>();
             }
+            if (uiRoot == null)
+                uiRoot = GameObject.Find("UI/ui");
             if (ui == null)
                 ui = GameObject.Find("UI/Stuff/UI/ui/StandardUI");
-            if (uiRoot == null)
-                uiRoot = GameObject.Find("UI/Stuff/UI/ui");
         }
 
         void Toggle()

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PhotoMode")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26cb9cd98ecbc6e6e57efb37e4f8c097342ce4ba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33b29f77f62c17c74d457b9fb408df8cfdea075d")]
 [assembly: System.Reflection.AssemblyProductAttribute("PhotoMode")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PhotoMode")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
