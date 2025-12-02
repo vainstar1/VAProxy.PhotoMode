@@ -131,6 +131,7 @@ namespace FreecamPauseMod
         FreecamMod.Freecam freecam;
         GameObject ui;
         GameObject uiRoot;
+        GameObject ripple;
         bool sceneReady;
 
         void Awake()
@@ -177,6 +178,7 @@ namespace FreecamPauseMod
                 freecam = null;
                 ui = null;
                 uiRoot = null;
+                ripple = null;
                 return;
             }
             EnsureReferences();
@@ -196,6 +198,8 @@ namespace FreecamPauseMod
                 uiRoot = GameObject.Find("UI/ui");
             if (ui == null)
                 ui = GameObject.Find("UI/Stuff/UI/ui/StandardUI");
+            if (ripple == null)
+                ripple = GameObject.Find("UI/Ripple");
         }
 
         void Toggle()
@@ -220,6 +224,8 @@ namespace FreecamPauseMod
                 ui.SetActive(true);
             if (uiRoot != null)
                 uiRoot.SetActive(true);
+            if (ripple != null)
+                ripple.SetActive(true);
         }
 
         void DisableUI()
@@ -228,6 +234,8 @@ namespace FreecamPauseMod
                 ui.SetActive(false);
             if (uiRoot != null)
                 uiRoot.SetActive(false);
+            if (ripple != null)
+                ripple.SetActive(false);
         }
     }
 }
