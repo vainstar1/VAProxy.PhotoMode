@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = PhotoMode
-build_property.ProjectDir = C:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\
+build_property.ProjectDir = c:\Users\andre\OneDrive\Desktop\big folder\PhotoMode\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

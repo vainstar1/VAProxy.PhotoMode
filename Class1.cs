@@ -116,7 +116,15 @@ namespace FreecamMod
                 float mouseY = Input.GetAxis("Mouse Y");
                 float newRotationX = transform.localEulerAngles.y + mouseX;
                 float newRotationY = transform.localEulerAngles.x - mouseY;
-                transform.localEulerAngles = new Vector3(newRotationY, newRotationX, 0f);
+                float roll = transform.localEulerAngles.z;
+                float rollSpeed = 0.5f;
+                if (InputManager.GetKey(KeyCode.Q))
+                    roll -= rollSpeed;
+                if (InputManager.GetKey(KeyCode.E))
+                    roll += rollSpeed;
+                if (InputManager.GetKey(KeyCode.R))
+                    roll = 0f;
+                transform.localEulerAngles = new Vector3(newRotationY, newRotationX, roll);
             }
         }
     }
@@ -130,8 +138,9 @@ namespace FreecamPauseMod
         ConfigEntry<KeyCode> freecamPauseKey;
         FreecamMod.Freecam freecam;
         GameObject ui;
+        GameObject uiAlt;
         GameObject uiRoot;
-        GameObject ripple;
+        GameObject uiRootAlt;
         bool sceneReady;
 
         void Awake()
@@ -177,8 +186,9 @@ namespace FreecamPauseMod
                     Time.timeScale = 1f;
                 freecam = null;
                 ui = null;
+                uiAlt = null;
                 uiRoot = null;
-                ripple = null;
+                uiRootAlt = null;
                 return;
             }
             EnsureReferences();
@@ -196,10 +206,12 @@ namespace FreecamPauseMod
             }
             if (uiRoot == null)
                 uiRoot = GameObject.Find("UI/ui");
+            if (uiRootAlt == null)
+                uiRootAlt = GameObject.Find("UI/Stuff/UI/ui");
             if (ui == null)
-                ui = GameObject.Find("UI/Stuff/UI/ui/StandardUI");
-            if (ripple == null)
-                ripple = GameObject.Find("UI/Ripple");
+                ui = GameObject.Find("UI/ui/StandardUI");
+            if (uiAlt == null)
+                uiAlt = GameObject.Find("UI/Stuff/UI/ui/StandardUI");
         }
 
         void Toggle()
@@ -224,8 +236,10 @@ namespace FreecamPauseMod
                 ui.SetActive(true);
             if (uiRoot != null)
                 uiRoot.SetActive(true);
-            if (ripple != null)
-                ripple.SetActive(true);
+            if (uiAlt != null)
+                uiAlt.SetActive(true);
+            if (uiRootAlt != null)
+                uiRootAlt.SetActive(true);
         }
 
         void DisableUI()
@@ -234,8 +248,10 @@ namespace FreecamPauseMod
                 ui.SetActive(false);
             if (uiRoot != null)
                 uiRoot.SetActive(false);
-            if (ripple != null)
-                ripple.SetActive(false);
+            if (uiAlt != null)
+                uiAlt.SetActive(false);
+            if (uiRootAlt != null)
+                uiRootAlt.SetActive(false);
         }
     }
 }
